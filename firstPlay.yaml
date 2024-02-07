@@ -1,0 +1,14 @@
+---
+
+- name: Update all
+  hosts: webservers
+  remote_user: ngonzales
+  become: yes
+
+  tasks:
+  - name: update then upgrade
+    apt:
+      update_cache:
+      upgrade: yes
+
+...
